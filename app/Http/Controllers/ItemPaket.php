@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\ItemPaketModel;
+use App\Models\MasterPaketModel;
 
 class ItemPaket extends Controller
 {
@@ -15,7 +16,8 @@ class ItemPaket extends Controller
      */
     public function index()
     {
-        return view('item_paket.index');
+        $master_paket = MasterPaketModel::all()->pluck('nama_paket', 'id_master_paket');
+        return view('item_paket.index', compact('master_paket'));
     }
 
     /**

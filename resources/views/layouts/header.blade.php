@@ -149,7 +149,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="mdi mdi-airplay"></i>Item Paket</a>
+                        <a href="{{ route('item.index') }}"><i class="mdi mdi-airplay"></i>Item Paket</a>
                     </li>
 
                 </ul>

@@ -20,8 +20,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary waves-effect waves-light">Save changes</button>
+                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Batal</button>
+                    <button class="btn btn-primary waves-effect waves-light">Simpan</button>
                 </div>
             </div><!-- /.modal-content -->
         </form>

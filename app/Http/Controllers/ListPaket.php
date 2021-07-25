@@ -13,7 +13,7 @@ class ListPaket extends Controller
      */
     public function index()
     {
-        //
+        return view('list_paket.index');
     }
 
     /**

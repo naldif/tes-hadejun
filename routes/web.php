@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MasterPaket;
 use App\Http\Controllers\ItemPaket;
+use App\Http\Controllers\ListPaket;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::resource('/master', MasterPaket::class);
 
 Route::get('/item/data', [ItemPaket::class, 'data'])->name('item.data');
 Route::resource('/item', ItemPaket::class);
+
+Route::get('/list/data', [ListPaket::class, 'data'])->name('list.data');
+Route::resource('/list', ListPaket::class);

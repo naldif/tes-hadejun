@@ -152,6 +152,10 @@
                         <a href="{{ route('item.index') }}"><i class="mdi mdi-airplay"></i>Item Paket</a>
                     </li>
 
+                    <li class="has-submenu">
+                        <a href="{{ route('list.index') }}"><i class="mdi mdi-airplay"></i>List Paket</a>
+                    </li>
+
                 </ul>
                 <!-- End navigation menu -->
             </div> <!-- end #navigation -->

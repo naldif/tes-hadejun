@@ -21,6 +21,26 @@ class ListPaket extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function data()
+    {
+        $itempaket = ItemPaketModel::orderBy('id_item_paket','desc')->get();
+
+        return datatables()
+            ->of($itempaket)
+            ->addIndexColumn()
+            ->addColumn('aksi', function ($itempaket){
+                return '
+                <div class="btn-group">
+                    <button onclick="editForm(`'. route('item.update', $itempaket->id_item_paket) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
+                    <button onclick="deleteData(`'. route('item.destroy', $itempaket->id_item_paket) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
+                </div>
+                ';
+            })
+            ->rawColumns(['aksi'])
+            ->make(true);
+    }
+    
     public function create()
     {
         //

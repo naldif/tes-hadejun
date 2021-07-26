@@ -88,6 +88,18 @@
     <script src="{{ asset('annex') }}/assets/plugins/morris/morris.min.js"></script>
 
     <script src="{{ asset('annex') }}/assets/pages/dashborad.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/event.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/supplemental.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/unresolved.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/21.1.4/js/dx.all.js"></script>
+
+
     <!-- Required datatable js -->
     <script src="{{ asset('annex') }}/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="{{ asset('annex') }}/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
@@ -110,17 +122,9 @@
     <!-- Validator -->
     <script src="{{asset('js/validator.min.js') }}"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/event.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/supplemental.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/unresolved.min.js"></script>
-    <script src="https://cdn3.devexpress.com/jslib/21.1.4/js/dx.all.js"></script>
-    
+
     @stack('scripts')
+    @stack('grid')
 </body>
 
 </html>

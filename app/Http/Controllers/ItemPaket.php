@@ -28,16 +28,16 @@ class ItemPaket extends Controller
 
     public function data()
     {
-        $itempaket = ItemPaketModel::orderBy('id_item_paket','desc')->get();
+        $listpaket = ItemPaketModel::orderBy('id_item_paket','desc')->get();
 
         return datatables()
-            ->of($itempaket)
+            ->of($listpaket)
             ->addIndexColumn()
-            ->addColumn('aksi', function ($itempaket){
+            ->addColumn('aksi', function ($listpaket){
                 return '
                 <div class="btn-group">
-                    <button onclick="editForm(`'. route('item.update', $itempaket->id_item_paket) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
-                    <button onclick="deleteData(`'. route('item.destroy', $itempaket->id_item_paket) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
+                    <button onclick="editForm(`'. route('item.update', $listpaket->id_item_paket) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
+                    <button onclick="deleteData(`'. route('item.destroy', $listpaket->id_item_paket) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
                 </div>
                 ';
             })
